@@ -1,6 +1,6 @@
 // URL de la API que quieres llamar
 const apiUrl = "https://api.fbi.gov/wanted/v1/list";
-const nombreElemento = document.querySelector("#impresName");
+
 let presos = [];
 
 function getInfo() {
@@ -33,7 +33,6 @@ function getInfo() {
 
 function addInfoFBI(info) {
   presos.push(info);
-  dibujarInfo();
 }
 
 function dibujarInfo() {
@@ -55,8 +54,15 @@ function dibujarInfo() {
             </div>
         `;
     // Agregar el elemento div creado al DOM
-    document.body.appendChild(elemento);
+    document.querySelector(".containerFlex").appendChild(elemento);
   });
 }
+
+const button = document.querySelector(".pintarInfo");
+
+button.addEventListener("click", (event) => {
+  dibujarInfo();
+  button.style.display = "none";
+});
 
 getInfo();

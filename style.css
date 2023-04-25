@@ -5,6 +5,7 @@
 .containerFlex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tarjeta {
@@ -29,4 +30,11 @@
 
 .nombre {
   font-size: x-small;
+}
+
+.pintarInfo {
+  background-color: blue;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 300px;
 }
